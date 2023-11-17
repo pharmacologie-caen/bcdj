@@ -13,5 +13,12 @@
 
 
 f1 <- function(x) {
-  x + 1
+
+  y <- eval(expr = x)
+
+  dat <<-
+    dat %>%
+    mutate(year = round(y/10000, 0))
 }
+
+
