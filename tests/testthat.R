@@ -1,19 +1,14 @@
-#' Test f2 function
-#'
-#' Short Title
-#'
-#' Description
-#'
-#' @param x
-#'
-#' @return
-#' @export
-#'
-#' @examples
 
-testf2 <- function(data_bin, data_bin_ref) {
-  data_test <- ifelse(dat$date_bin_ref == date_bin, FALSE, TRUE)
-  data_test <- sum(data_test)
-  test_result <- ifelse(data_test == 0, "La fonction f2 fonctionne correctement", "Il y a une erreur dans la fonction f2")
-  return(test_result)
-}
+
+test_that("multiplication works", {
+  load("dat.Rdata")
+  f2_output <-
+    # f2(dat)
+     c(1, 0, 0)
+
+    dat <- data.frame(date_bin_ref = c(1, 0, 0))
+
+    true_res <- dat$date_bin_ref
+
+  expect_equal(f2_output, true_res)
+})
