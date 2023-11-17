@@ -1,8 +1,8 @@
-#' Title
+#' Fonction 2
 #'
-#' Short title
+#' Date < 01/01/2020
 #'
-#' Description
+#' Création variable binaire "date plus récente que 01/01/2020"
 #'
 #' @param x
 #'
