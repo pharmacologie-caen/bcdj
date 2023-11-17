@@ -18,7 +18,7 @@ f1 <- function(x) {
 
   dat <<-
     dat %>%
-    mutate(year = round(y/10000, 0))
+    mutate(date_year = round(y/10000, 0))
 
 }
 
