@@ -11,13 +11,9 @@
 #'
 #' @examples
 
-library(testthat)
-library(ptest)
-
-test.f2 <- function(date_bin, date_bin_ref) {
-  test_that("La variable dichotomique date_bin est créée correctement", {
-  expect_equal(date_bin, date_bin_ref, info = "La variable dichotomique date_bin n'est pas créée correctement.")
-  })
+testf2 <- function(data_bin, data_bin_ref) {
+  data_test <- ifelse(dat$date_bin_ref == date_bin, FALSE, TRUE)
+  data_test <- sum(data_test)
+  test_result <- ifelse(data_test == 0, "La fonction f2 fonctionne correctement", "Il y a une erreur dans la fonction f2")
+  return(test_result)
 }
-
-ptest::pt()
