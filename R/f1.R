@@ -14,11 +14,13 @@
 
 f1 <- function(x) {
 
-  y <- eval(expr = x)
+  z <- eval(expr = x)
 
   dat <<-
     dat %>%
-    mutate(year = round(y/10000, 0))
+    mutate(date_year = round(z/10000, 0))
+
+  # this is some comment
 
 }
 
